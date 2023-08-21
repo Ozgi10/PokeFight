@@ -1,13 +1,15 @@
 const jsonData = require("../../pokedex.json");
 
+// get all Pokemnos from jsonData= pokedex.json
 exports.getPokemons = (req, res) => {
   try {
     res.json(jsonData);
   } catch (error) {
-    res.status(500).json({ error: "Internal Server Error" });
+    res.status(500).json({ error: "Fetching Pokemons Data Server Error" });
   }
 };
 
+//get Pokemon by ID and retrieve all
 exports.getPokemonById = (req, res) => {
   const { id } = req.params;
 
@@ -19,10 +21,11 @@ exports.getPokemonById = (req, res) => {
       res.status(404).json({ error: "Pokemon not found" });
     }
   } catch (error) {
-    res.status(500).json({ error: "Internal Server Error" });
+    res.status(500).json({ error: "Fetching Pokemons Data Server Error" });
   }
 };
 
+// get Pokemon by ID and retrive one Info: name or type or base
 exports.getPokemonInfoById = (req, res) => {
   const { id, info } = req.params;
 
@@ -38,6 +41,6 @@ exports.getPokemonInfoById = (req, res) => {
       res.status(404).json({ error: "Pokemon not found" });
     }
   } catch (error) {
-    res.status(500).json({ error: "Internal Server Error" });
+    res.status(500).json({ error: "Fetching Pokemons Data Server Error" });
   }
 };
