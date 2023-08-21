@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.cjs",
   "scripts": {
-    "dev": "node --watch app.cjs"
+    "dev": "node --watch app.cjs",
+    "start": "node app.js"
   },
   "keywords": [
     "example",
