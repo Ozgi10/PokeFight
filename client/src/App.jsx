@@ -8,7 +8,7 @@ export default function App() {
     <Router>
       <div>
         <Routes>
-          <Route path="/" element="Welcome to PokeFight!" />
+          <Route path="/" element="Welcome to PokeFight!!!" />
           <Route path="/pokemon/" element={<PokemonList />} />
           <Route path="/pokemon/:id" element={<PokemonDetail />} />
           <Route path="/pokemon/:id/:info" element={<PokemonInfo />} />
